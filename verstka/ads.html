@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
+  <title>Topic Объявления</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon1.png">
+  <link rel="stylesheet" href="libs/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Oswald:400,500|Stalinist+One" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?4">
+  <!-- <link rel="stylesheet" type="text/css" href="css/services.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/ads.css">
+  <!-- <script src="https://use.fontawesome.com/dd9222dc10.js"></script> -->
+  <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+  <link rel="stylesheet" type="text/css" href="libs/slick/slick.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css" /> -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 col-xl-2">
+            <div class="dropdown show">
+              <div class="language" role="button" id="language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                <span id="selected_language">РУССКИЙ</span>
+              </div>
+              <div class="dropdown-menu" id="language_select" aria-labelledby="language">
+                <a class="dropdown-item" href="#">РУССКИЙ</a>
+                <a class="dropdown-item" href="#">ENGLISH</a>
+              </div>
+            </div>
+            <div class="dropdown show">
+              <div class="your_town" role="button" id="your_town" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span id="town">ВАШ ГОРОД</span>
+              </div>
+              <div class="dropdown-menu" id="town_select" aria-labelledby="your_town">
+                <a class="dropdown-item" href="#">Балыкчы</a>
+                <a class="dropdown-item" href="#">Бишкек</a>
+                <a class="dropdown-item" href="#">Джалал-Абад</a>
+                <a class="dropdown-item" href="#">Каракол</a>
+                <a class="dropdown-item" href="#">Кант</a>
+                <a class="dropdown-item" href="#">Кара-Балта</a>
+                <a class="dropdown-item" href="#">Нарын</a>
+                <a class="dropdown-item" href="#">Ош</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-8">
+            <a class="logo" href="#">
+              <!-- <img src="images/logo.png" alt=""> -->
+            </a>
+          </div>
+          <div class="col-12 col-md-3 col-xl-2">
+            <div class="social_networks">
+              <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-skype" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div id="entrance">ВХОД/РЕГИСТРАЦИЯ</div>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <section class="nav">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a href="#" class="nav-link">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Фирмы</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Объявления</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Работа</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Авто</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Недвижимость</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">База отдыха</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Знакомства</a>
+              </li>
+              <li id="entrance_in_menu" class="nav-item disabled">
+                <a href="#" class="nav-link disabled">ВХОД/РЕГИСТРАЦИЯ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /.container -->
+      <div class="bottom_menu">
+        <div id="categories_container" class="bottom_menu_items" >
+          <a id="categories" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span id="selected_category">категории&nbsp;</span>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <div id="categories_select" class="dropdown-menu" aria-labelledby="categories">
+            <a class="dropdown-item" href="#">Категория 1</a>
+            <a class="dropdown-item" href="#">Категория 2</a>
+            <a class="dropdown-item" href="#">Категория 3</a>
+            <a class="dropdown-item" href="#">Категория 4</a>
+            <a class="dropdown-item" href="#">Категория 5</a>
+            <a class="dropdown-item" href="#">Категория 6</a>
+            <a class="dropdown-item" href="#">Категория 7</a>
+            <a class="dropdown-item" href="#">Категория 8</a>
+          </div>
+        </div>
+        <!-- если добавить subcategories_active к данному элементу с class="bottom_menu_items" кнопка визуально будет активна-->
+        <div id="subcategories_container" class="bottom_menu_items">
+          <a class="subcategories" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span id="selected_subcategory">подкатегории&nbsp;</span>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <div id="subcategories_select" class="dropdown-menu" aria-labelledby="subcategories_active">
+            <a class="dropdown-item" href="#">Подкатегория 1</a>
+            <a class="dropdown-item" href="#">Подкатегория 2</a>
+            <a class="dropdown-item" href="#">Подкатегория 3</a>
+            <a class="dropdown-item" href="#">Подкатегория 4</a>
+            <a class="dropdown-item" href="#">Подкатегория 5</a>
+            <a class="dropdown-item" href="#">Подкатегория 6</a>
+            <a class="dropdown-item" href="#">Подкатегория 7</a>
+            <a class="dropdown-item" href="#">Подкатегория 8</a>
+          </div>
+        </div>
+        <div class="bottom_menu_items">
+          <form id="search" class="search" method="get" role="search" action="/">
+            <input id="search_field" type="text" name="s" placeholder="Поиск, например &laquo;Ночной клуб&raquo;">
+            <input class="cross" type="reset" value="">
+            <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+            <a class="small_sliders" href="#"></a>
+            <input class="searching" type="submit" value="">
+            <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+          </form>
+        </div>
+        <div class="bottom_menu_items">
+          <div id="add_advert">
+            <span>добавить объявление</span>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.nav -->
+    <section class="vip_ads">
+      <div class="premium_slider">
+        <div class="premium_slider_containers">
+          <img src="images/iphone5se.jpg" alt="">
+          <p class="model">iPhone 5SE</p>
+          <p class="cost">14 500 руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/3dprinter.jpg" alt="">
+          <p class="model">3D принтер</p>
+          <p class="cost">145 000 руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/iphone6s.jpg" alt="">
+          <p class="model">iPhone 6S</p>
+          <p class="cost">25 000 руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/panasonic.jpg" alt="">
+          <p class="model">Проектор Panasonic</p>
+          <p class="cost">17 000 руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/nikon.jpg" alt="">
+          <p class="model">Фотоаппарат Nikon</p>
+          <p class="cost">35 000 руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/iphone5se.jpg" alt="">
+          <p class="model">iPhone 5SE</p>
+          <p class="cost">14 500 руб.</p>
+        </div>
+      </div>
+      <span class="on_the_rights">Попасть сюда</span>
+    </section>
+    <!-- /.vip_ads -->
+
+    <section class="sections">
+      <!-- <h2 class="caption">КУПИТЬ НЕДВИЖИМОСТЬ</h2> -->
+      <div class="container">
+        <div class="row ads_sections">
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/all_for_home.jpg" alt="">
+              <div class="sssa_description">
+                <div>Всё для дома</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/electronics.jpg" alt="">
+              <div class="sssa_description">
+                <div>Электроника</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/all_for_garden.jpg" alt="">
+              <div class="sssa_description">
+                <div>Всё для сада</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/animals.jpg" alt="">
+              <div class="sssa_description">
+                <div>Животные</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/give_for_nothing.jpg" alt="">
+              <div class="sssa_description">
+                <div>Отдам даром / Обмен</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/clothes_accessories.jpg" alt="">
+              <div class="sssa_description">
+                <div>Одежда и аксессуары</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/all_for_children.jpg" alt="">
+              <div class="sssa_description">
+                <div>Всё для детей</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/handmade.jpg" alt="">
+              <div class="sssa_description">
+                <div>Ручная работа</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/hobby.jpg" alt="">
+              <div class="sssa_description">
+                <div>Хобби и антиквариат</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end row ads_sections-->
+      </div>
+      <!--container-->
+    </section>
+
+    <section class="vip_ads">
+      <h2 class="caption">VIP ОБЪЯВЛЕНИЯ</h2>
+      <div class="vip_carousel">
+        <img src="images/auto.png" alt="">
+        <img src="images/development.png" alt="">
+        <img src="images/auto.png" alt="">
+        <img src="images/development.png" alt="">
+        <img src="images/auto.png" alt="">
+        <img src="images/development.png" alt="">
+      </div>
+      <span class="on_the_rights">Попасть сюда</span>
+    </section>
+    <!-- /.vip_ads -->
+    <section class="sections">
+      <h2 class="caption">НОВЫЕ ОБЪЯВЛЕНИЯ</h2>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad1.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Оперативная память</p>
+                <p class="cost">3 500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad2.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Колонки</p>
+                <p class="cost">2 000 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad3.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Смартфон</p>
+                <p class="cost">2 500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad4.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Устройство</p>
+                <p class="cost">5 000 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad5.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Монитор</p>
+                <p class="cost">6 000 руб.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad6.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Плата</p>
+                <p class="cost">8 000 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad7.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Колонки</p>
+                <p class="cost">20 000 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad8.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Проектор</p>
+                <p class="cost">40 000 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad9.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Устройство</p>
+                <p class="cost">14 500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad10.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Плата</p>
+                <p class="cost">100 руб.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad11.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Видеорегистратор</p>
+                <p class="cost">17 500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad12.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Мобильный телефон</p>
+                <p class="cost">2 000 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad13.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Планшет</p>
+                <p class="cost">14 500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad14.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Смартфон</p>
+                <p class="cost">12 500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad15.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Ноутбук</p>
+                <p class="cost">30 000 руб.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad16.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Задняя крышка</p>
+                <p class="cost">500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad17.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Фотоаппарат Nikon</p>
+                <p class="cost">67 000 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad18.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Объектив</p>
+                <p class="cost">40 500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad19.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Планшет</p>
+                <p class="cost">20 500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad20.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Фотоаппарат</p>
+                <p class="cost">60 500 руб.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad21.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Колонки</p>
+                <p class="cost">700 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img class="new_ads_images" src="images/ad22.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Видеокамера</p>
+                <p class="cost">32 330 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad23.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Устройство</p>
+                <p class="cost">28 500 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad24.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">iPhone</p>
+                <p class="cost">6 700 руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="new_ads_containers">
+              <img  class="new_ads_images" src="images/ad25.jpg" alt="">
+              <div class="new_ads_containers_description">
+
+                <p class="model">Оперативная память</p>
+                <p class="cost">500 руб.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end row-->
+      </div>
+      <!--container-->
+
+      <nav class="pagination_block" aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">&laquo;</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">&raquo;</a>
+          </li>
+        </ul>
+      </nav>
+
+    </section>
+    <section class="sections new_ads">
+      <h2 class="caption">НАШИ ПАРТНЁРЫ</h2>
+      <div class="multiple-items">
+        <div><img src="images/tnt.png" alt="ТНТ"></div>
+        <div><img src="images/cafe_haven_logo.png" alt="cafe haven"></div>
+        <div><img src="images/sushinka.png" alt="Суши-нка"></div>
+        <div><img src="images/palms.png" alt=""></div>
+        <div><img src="images/gazprom.png" alt=""></div>
+        <div><img src="images/homecinema.png" alt=""></div>
+        <div><img src="images/newstroy.png" alt=""></div>
+        <div><img src="images/Senior_Home_Sales_Logo.png" alt=""></div>
+      </div>
+      <a href="#" class="our_parters_button">Все партнёры</a>
+    </section>
+    <!-- /.sections -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <h3 class="footer_headers">Информация</h3>
+            <a href="#" class="footer_menu">Карта сайта</a>
+            <a href="#" class="footer_menu">Карта городов</a>
+            <a href="#" class="footer_menu">Карта организаций</a>
+            <a href="#" class="footer_menu">Условия пользования</a>
+            <div class="counter">
+              <img class="counter_img" src="images/counter.png" alt="">
+              <p class="number_of_views">ПРОСМОТРОВ ЗА СЕГОДНЯ</p>
+            </div>
+          </div>
+          <!-- /.col-6 col-md-3 -->
+          <div class="col-6 col-md-3">
+            <h3 class="footer_headers">Обратная связь</h3>
+            <a href="#" class="footer_menu">Пожаловаться на рекламу</a>
+            <a href="#" class="footer_menu">Пожаловаться на модератора</a>
+            <a href="#" class="footer_menu">Оставить отзыв или предложение</a>
+            <a href="#" class="footer_menu">Заметили ошибку?</a>
+            <div id="add_advert_footer">
+              <span>добавить объявление</span>
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+          <!-- /.col-6 col-md-3 -->
+          <div class="col-6 col-md-3">
+            <h3 class="footer_headers">Дополнительно</h3>
+            <a href="#" class="footer_menu">Вакансии у нас</a>
+            <a href="#" class="footer_menu">Мобильное приложение</a>
+            <a href="#" class="footer_menu">Победители конкурсов</a>
+            <a href="#" class="footer_menu">Платные услуги</a>
+            <div id="entrance_footer">ВХОД/РЕГИСТРАЦИЯ</div>
+          </div>
+          <!-- /.col-6 col-md-3 -->
+          <div class="col-6 col-md-3">
+            <h3 class="footer_headers">Внимание!</h3>
+            <p class="copy">Копирование и использование материалов сайта в любом виде без согласования с администрацией запрещено. Незаконное использование влечет административную или уголовную ответственность</p>
+            <div class="social_networks_footer">
+              <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-skype" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="all_rights_reserved">
+              &copy;
+              <script>
+                var year = new Date();
+                year = year.getYear();
+                if (year < 1900) year += 1900;
+                document.write(year);
+              </script> - Все права защищены
+            </div>
+          </div>
+          <!-- /.col-6 col-md-3 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+      <div class="making">Сайт изготовлен студией<a href="#" target="_blank"> 8bit-studio</a></div>
+    </footer>
+    </div>
+    <!-- .wrapper -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- <script src="libs/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script> -->
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="js/my_scripts.js"></script>
+</body>
+
+</html>
