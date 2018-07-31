@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
+  <title>Topic Недвижимость</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon1.png">
+  <link rel="stylesheet" href="libs/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Oswald:400,500|Stalinist+One" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?4">
+  <!-- <link rel="stylesheet" type="text/css" href="css/services.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/the_property.css">
+  <!-- <script src="https://use.fontawesome.com/dd9222dc10.js"></script> -->
+  <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+  <link rel="stylesheet" type="text/css" href="libs/slick/slick.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css" /> -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 col-xl-2">
+            <div class="dropdown show">
+              <div class="language" role="button" id="language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                <span id="selected_language">РУССКИЙ</span>
+              </div>
+              <div class="dropdown-menu" id="language_select" aria-labelledby="language">
+                <a class="dropdown-item" href="#">РУССКИЙ</a>
+                <a class="dropdown-item" href="#">ENGLISH</a>
+              </div>
+            </div>
+            <div class="dropdown show">
+              <div class="your_town" role="button" id="your_town" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span id="town">ВАШ ГОРОД</span>
+              </div>
+              <div class="dropdown-menu" id="town_select" aria-labelledby="your_town">
+                <a class="dropdown-item" href="#">Балыкчы</a>
+                <a class="dropdown-item" href="#">Бишкек</a>
+                <a class="dropdown-item" href="#">Джалал-Абад</a>
+                <a class="dropdown-item" href="#">Каракол</a>
+                <a class="dropdown-item" href="#">Кант</a>
+                <a class="dropdown-item" href="#">Кара-Балта</a>
+                <a class="dropdown-item" href="#">Нарын</a>
+                <a class="dropdown-item" href="#">Ош</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-8">
+            <a class="logo" href="#">
+              <!-- <img src="images/logo.png" alt=""> -->
+            </a>
+          </div>
+          <div class="col-12 col-md-3 col-xl-2">
+            <div class="social_networks">
+              <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-skype" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div id="entrance">ВХОД/РЕГИСТРАЦИЯ</div>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <section class="nav">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a href="#" class="nav-link">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Фирмы</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Объявления</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Работа</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Авто</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Недвижимость</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">База отдыха</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Знакомства</a>
+              </li>
+              <li id="entrance_in_menu" class="nav-item disabled">
+                <a href="#" class="nav-link disabled">ВХОД/РЕГИСТРАЦИЯ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /.container -->
+      <div class="bottom_menu">
+        <div id="categories_container" class="bottom_menu_items" >
+          <a id="categories" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span id="selected_category">категории&nbsp;</span>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <div id="categories_select" class="dropdown-menu" aria-labelledby="categories">
+            <a class="dropdown-item" href="#">Категория 1</a>
+            <a class="dropdown-item" href="#">Категория 2</a>
+            <a class="dropdown-item" href="#">Категория 3</a>
+            <a class="dropdown-item" href="#">Категория 4</a>
+            <a class="dropdown-item" href="#">Категория 5</a>
+            <a class="dropdown-item" href="#">Категория 6</a>
+            <a class="dropdown-item" href="#">Категория 7</a>
+            <a class="dropdown-item" href="#">Категория 8</a>
+          </div>
+        </div>
+        <!-- если добавить subcategories_active к данному элементу с class="bottom_menu_items" кнопка визуально будет активна-->
+        <div id="subcategories_container" class="bottom_menu_items">
+          <a class="subcategories" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span id="selected_subcategory">подкатегории&nbsp;</span>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <div id="subcategories_select" class="dropdown-menu" aria-labelledby="subcategories_active">
+            <a class="dropdown-item" href="#">Подкатегория 1</a>
+            <a class="dropdown-item" href="#">Подкатегория 2</a>
+            <a class="dropdown-item" href="#">Подкатегория 3</a>
+            <a class="dropdown-item" href="#">Подкатегория 4</a>
+            <a class="dropdown-item" href="#">Подкатегория 5</a>
+            <a class="dropdown-item" href="#">Подкатегория 6</a>
+            <a class="dropdown-item" href="#">Подкатегория 7</a>
+            <a class="dropdown-item" href="#">Подкатегория 8</a>
+          </div>
+        </div>
+        <div class="bottom_menu_items">
+          <form id="search" class="search" method="get" role="search" action="/">
+            <input id="search_field" type="text" name="s" placeholder="Поиск, например &laquo;Ночной клуб&raquo;">
+            <input class="cross" type="reset" value="">
+            <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+            <a class="small_sliders" href="#"></a>
+            <input class="searching" type="submit" value="">
+            <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+          </form>
+        </div>
+        <div class="bottom_menu_items">
+          <div id="add_advert">
+            <span>добавить объявление</span>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.nav -->
+    <section class="vip_ads">
+      <!-- <h2 class="caption">ПРЕМИУМ ОБЪЯВЛЕНИЯ</h2> -->
+      <div class="premium_slider">
+        <div class="premium_slider_containers">
+          <img src="images/vip_flat_1.jpg" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 млн.руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/vip_flat_1.jpg" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 000 000 руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/vip_flat_1.jpg" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 млн.руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/vip_flat_1.jpg" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 млн.руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/vip_flat_1.jpg" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 млн.руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/auto.png" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 млн.руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/transport.png" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 млн.руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/transportations.png" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 млн.руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/bampers_repair.jpg" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 млн.руб.</p>
+        </div>
+        <div class="premium_slider_containers">
+          <img src="images/sts.png" alt="">
+          <p class="property_name">Квартира</p>
+          <p class="district">ПМК</p>
+          <p class="flat_cost">Цена: 2 млн.руб.</p>
+        </div>
+      </div>
+      <span class="on_the_rights">Попасть сюда</span>
+    </section>
+    <!-- /.vip_ads -->
+
+    <section class="sections">
+      <h2 class="caption">КУПИТЬ НЕДВИЖИМОСТЬ</h2>
+      <div class="container">
+        <div class="row ads_sections">
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_apartment.jpg" alt="">
+              <div class="thirteen">13 квартир</div>
+              <div class="sssa_description">
+                <div>Купить квартиру</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_room.jpg" alt="">
+              <div class="thirteen">13 комнат</div>
+              <div class="sssa_description">
+                <div>Купить комнату</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_house.jpg" alt="">
+              <div class="thirteen">13 домов</div>
+              <div class="sssa_description">
+                <div>Купить дом</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/apartment_in_new_buildings.jpg" alt="">
+              <div class="thirteen">13 квартир</div>
+              <div class="sssa_description">
+                <div>Купить квартиру в новостройках</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/commercial_property.jpg" alt="">
+              <div class="thirteen offers">13 предложений</div>
+              <div class="sssa_description">
+                <div>Купить коммерческую<br>недвижимость</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_land.jpg" alt="">
+              <div class="thirteen">13 участков</div>
+              <div class="sssa_description">
+                <div>Купить участок</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+        </div>
+        <!--end row ads_sections-->
+      </div>
+      <!--container-->
+      <div class="container">
+        <div class="row ads_sections">
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_garage.jpg" alt="">
+              <div class="thirteen">13 гаражей</div>
+              <div class="sssa_description">
+                <div>Купить гараж</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/property_abroad.jpg" alt="">
+              <div class="thirteen offers">13 предложений</div>
+              <div class="sssa_description">
+                <div>Купить недвижимость за рубежом</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_parking.jpg" alt="">
+              <div class="thirteen">13 парковок</div>
+              <div class="sssa_description">
+                <div>Купить парковку</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+        </div>
+        <!--end row ads_sections-->
+      </div>
+      <!--container-->
+    </section>
+    <section class="sections">
+      <h2 class="caption">СНЯТЬ НЕДВИЖИМОСТЬ</h2>
+      <div class="container">
+        <div class="row ads_sections">
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_apartment.jpg" alt="">
+              <div class="thirteen">13 квартир</div>
+              <div class="sssa_description">
+                <div>Снять квартиру</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_room.jpg" alt="">
+              <div class="thirteen">13 комнат</div>
+              <div class="sssa_description">
+                <div>Снять комнату</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_house.jpg" alt="">
+              <div class="thirteen">13 домов</div>
+              <div class="sssa_description">
+                <div>Снять дом</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/apartment_in_new_buildings.jpg" alt="">
+              <div class="thirteen">13 квартир</div>
+              <div class="sssa_description">
+                <div>Снять квартиру в новостройках</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/commercial_property.jpg" alt="">
+              <div class="thirteen offers">13 предложений</div>
+              <div class="sssa_description">
+                <div>Снять коммерческую<br>недвижимость</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_land.jpg" alt="">
+              <div class="thirteen">13 участков</div>
+              <div class="sssa_description">
+                <div>Снять участок</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+        </div>
+        <!--end row ads_sections-->
+      </div>
+      <!--container-->
+      <div class="container">
+        <div class="row ads_sections">
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_garage.jpg" alt="">
+              <div class="thirteen">13 гаражей</div>
+              <div class="sssa_description">
+                <div>Снять гараж</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/property_abroad.jpg" alt="">
+              <div class="thirteen offers">13 предложений</div>
+              <div class="sssa_description">
+                <div>Снять недвижимость за рубежом</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/buy_parking.jpg" alt="">
+              <div class="thirteen">13 парковок</div>
+              <div class="sssa_description">
+                <div>Снять парковку</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 rent_by_the_day">
+            <div class="sssa">
+              <img class="sssa_images" src="images/for_rent.jpg" alt="">
+              <div class="thirteen offers">13 предложений</div>
+              <div class="sssa_description">
+                <div>Снять посуточно</div>
+              </div>
+              <!-- <a href="#" class="sssa_hover">
+                <p class="sssa_hover_description">Бизнес-центры</p>
+                <p class="sssa_hover_description">Офисы</p>
+                <p class="sssa_hover_description">Магазины</p>
+              </a> -->
+            </div>
+          </div>
+        </div>
+        <!--end row ads_sections-->
+      </div>
+      <!--container-->
+      <div class="container rent_by_the_day">
+        <div class="row justify-content-center">
+          <div class="col-8 col-lg-5 ">
+            <div class="sssa">
+              <img class="sssa_images" src="images/for_rent.jpg" alt="">
+              <div class="thirteen offers">13 предложений</div>
+              <div class="sssa_description">
+                <div>Снять посуточно</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end row-->
+      </div>
+      <!--container-->
+    </section>
+    <section class="vip_ads">
+      <h2 class="caption">VIP ОБЪЯВЛЕНИЯ</h2>
+      <div class="vip_carousel">
+        <img src="images/auto.png" alt="">
+        <img src="images/development.png" alt="">
+        <img src="images/auto.png" alt="">
+        <img src="images/development.png" alt="">
+        <img src="images/auto.png" alt="">
+        <img src="images/development.png" alt="">
+      </div>
+      <span class="on_the_rights">На правах рекламы</span>
+    </section>
+    <!-- /.vip_ads -->
+    <section class="sections">
+      <div class="find_flats">
+        <div class="find_flats_container">
+          <form action="">
+            <input type="radio" class="radio" id="find_all" name="find" checked>
+            <label for="find_all">все</label>
+            <input type="radio" class="radio" id="find_new" name="find">
+            <label for="find_new">новые</label>
+            <input type="submit" name="find" value="Найти">
+          </form>
+
+          <!-- <div class="find_flats_checkboxes_labels">
+            <div class="find_flats_checkboxes">
+              <div class="find_flats_checkboxes_birds active"></div>
+            </div>
+            <div class="find_flats_labels active">
+              все
+            </div>
+          </div>
+          <div class="find_flats_checkboxes_labels">
+            <div class="find_flats_checkboxes">
+              <div class="find_flats_checkboxes_birds"></div>
+            </div>
+            <div class="find_flats_labels">
+              новые
+            </div>
+          </div>
+          <div class="find_flats_button">Найти</div> -->
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="find_flat_containers">
+              <img  class="find_flat_images" src="images/vip_flat_1.jpg" alt="">
+              <div class="find_flat_containers_description">
+                <p class="property_name">Квартира</p>
+                <p class="district">ПМК</p>
+                <p class="flat_cost">Цена: 2 млн.руб.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end row-->
+      </div>
+      <!--container-->
+
+      <nav class="pagination_block" aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">&laquo;</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">&raquo;</a>
+          </li>
+        </ul>
+      </nav>
+
+    </section>
+    <section class="sections find_flat">
+      <h2 class="caption">НАШИ ПАРТНЁРЫ</h2>
+      <div class="multiple-items">
+        <div><img src="images/tnt.png" alt="ТНТ"></div>
+        <div><img src="images/cafe_haven_logo.png" alt="cafe haven"></div>
+        <div><img src="images/sushinka.png" alt="Суши-нка"></div>
+        <div><img src="images/palms.png" alt=""></div>
+        <div><img src="images/gazprom.png" alt=""></div>
+        <div><img src="images/homecinema.png" alt=""></div>
+        <div><img src="images/newstroy.png" alt=""></div>
+        <div><img src="images/Senior_Home_Sales_Logo.png" alt=""></div>
+      </div>
+      <a href="#" class="our_parters_button">Все партнёры</a>
+    </section>
+    <!-- /.sections -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <h3 class="footer_headers">Информация</h3>
+            <a href="#" class="footer_menu">Карта сайта</a>
+            <a href="#" class="footer_menu">Карта городов</a>
+            <a href="#" class="footer_menu">Карта организаций</a>
+            <a href="#" class="footer_menu">Условия пользования</a>
+            <div class="counter">
+              <img class="counter_img" src="images/counter.png" alt="">
+              <p class="number_of_views">ПРОСМОТРОВ ЗА СЕГОДНЯ</p>
+            </div>
+          </div>
+          <!-- /.col-6 col-md-3 -->
+          <div class="col-6 col-md-3">
+            <h3 class="footer_headers">Обратная связь</h3>
+            <a href="#" class="footer_menu">Пожаловаться на рекламу</a>
+            <a href="#" class="footer_menu">Пожаловаться на модератора</a>
+            <a href="#" class="footer_menu">Оставить отзыв или предложение</a>
+            <a href="#" class="footer_menu">Заметили ошибку?</a>
+            <div id="add_advert_footer">
+              <span>добавить объявление</span>
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+          <!-- /.col-6 col-md-3 -->
+          <div class="col-6 col-md-3">
+            <h3 class="footer_headers">Дополнительно</h3>
+            <a href="#" class="footer_menu">Вакансии у нас</a>
+            <a href="#" class="footer_menu">Мобильное приложение</a>
+            <a href="#" class="footer_menu">Победители конкурсов</a>
+            <a href="#" class="footer_menu">Платные услуги</a>
+            <div id="entrance_footer">ВХОД/РЕГИСТРАЦИЯ</div>
+          </div>
+          <!-- /.col-6 col-md-3 -->
+          <div class="col-6 col-md-3">
+            <h3 class="footer_headers">Внимание!</h3>
+            <p class="copy">Копирование и использование материалов сайта в любом виде без согласования с администрацией запрещено. Незаконное использование влечет административную или уголовную ответственность</p>
+            <div class="social_networks_footer">
+              <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-skype" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="all_rights_reserved">
+              &copy;
+              <script>
+                var year = new Date();
+                year = year.getYear();
+                if (year < 1900) year += 1900;
+                document.write(year);
+              </script> - Все права защищены
+            </div>
+          </div>
+          <!-- /.col-6 col-md-3 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+      <div class="making">Сайт изготовлен студией<a href="#" target="_blank"> 8bit-studio</a></div>
+    </footer>
+    </div>
+    <!-- .wrapper -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- <script src="libs/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script> -->
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="js/my_scripts.js"></script>
+</body>
+
+</html>
