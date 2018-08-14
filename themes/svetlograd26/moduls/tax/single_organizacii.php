@@ -1,5 +1,5 @@
     <section class="sections">
-      <!-- <h2 class="caption">РАЗДЕЛЫ ОБЪЯВЛЕНИЙ</h2> -->
+      <h2 class="caption">РАЗДЕЛЫ ОБЪЯВЛЕНИЙ</h2>
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-8">
@@ -11,32 +11,45 @@
               <span>1-к квартира, 67,7 м</span>
               <span class="buy_apartments_right">3 500 000 руб.</span>
             </h3>
-            <div class="the_flat_slider-for">
-              <img class="the_flat_slider-for_images" src="<?php echo get_template_directory_uri();  ?>/images/flat_1.jpg" alt="">
-              <img class="the_flat_slider-for_images" src="<?php echo get_template_directory_uri();  ?>/images/flat_1.jpg" alt="">
-              <img class="the_flat_slider-for_images" src="<?php echo get_template_directory_uri();  ?>/images/flat_1.jpg" alt="">
-              <img class="the_flat_slider-for_images" src="<?php echo get_template_directory_uri();  ?>/images/flat_1.jpg" alt="">
-              <img class="the_flat_slider-for_images" src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-              <img class="the_flat_slider-for_images" src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
-              <img class="the_flat_slider-for_images" src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-              <img class="the_flat_slider-for_images" src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
-            </div>
-            <div class="the_flat_slider-nav">
-              <img src="<?php echo get_template_directory_uri();  ?>/images/flat_1.jpg" alt="">
-              <img src="<?php echo get_template_directory_uri();  ?>/images/flat_1.jpg" alt="">
-              <img src="<?php echo get_template_directory_uri();  ?>/images/flat_1.jpg" alt="">
-              <img src="<?php echo get_template_directory_uri();  ?>/images/flat_1.jpg" alt="">
-              <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-              <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
-              <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-              <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
-            </div>
-            <div class="tel">+1 234 567 8900</div>
-            <div class="write_message">Написать сообщение</div>
-            <p class="flat_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <?php
+$images = get_field('foto_all');
+
+if( $images ): ?>
+    <div class="the_flat_slider-for">
+        <?php foreach( $images as $image ): ?>
+                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+
+<?php
+
+if( $images ): ?>
+    <div class="the_flat_slider-nav">
+        <?php foreach( $images as $image ): ?>
+                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+            <!-- <div class="tel">+1 234 567 8900</div> -->
+            <!-- <div class="write_message">Написать сообщение</div> -->
+            <p class="flat_description"><?php the_content(); ?>
             </p>
             <div class="container">
+            <div class="row">
+              <ul class="info_list">
+                <li><span class="info_name">name01</span><span class="info_value">value001</span></li>
+                <li><span class="info_name">name02</span><span class="info_value">value002</span></li>
+                <li><span class="info_name">name03</span><span class="info_value">value003</span></li>
+                <li><span class="info_name">name04</span><span class="info_value">value004</span></li>
+                <li><span class="info_name">name05</span><span class="info_value">value005</span></li>
+                <li><span class="info_name">name06</span><span class="info_value">value006</span></li>
+                <li><span class="info_name">name07</span><span class="info_value">value007</span></li>
+                <li><span class="info_name">name08</span><span class="info_value">value008</span></li>
+                <li><span class="info_name">name09</span><span class="info_value">value009</span></li>
+                <li><span class="info_name">name10</span><span class="info_value">value010</span></li>
+              </ul>
+            </div>
               <div class="row">
                 <div class="col-6">
                   <p class="the_flat_capture">Квартира</p>
