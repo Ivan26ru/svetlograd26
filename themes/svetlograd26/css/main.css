@@ -540,7 +540,8 @@ ul.slick-dots li.slick-active {
 }
 
 .col-6.col-lg-4,
-.col-6.col-md-3 {
+.col-6.col-md-3,
+.col-6.col-sm-4 {
     padding: 15px
 }
 

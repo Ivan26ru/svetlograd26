@@ -44,7 +44,7 @@ span.work_by_profession_text {
   float: left;
 }
 .work_containers {
-  height: 155px;
+  /*height: 155px;*/
   padding: 5px 5px 15px 0;
   position: relative;
   margin-bottom: 10px;
@@ -80,15 +80,21 @@ span.work_by_profession_text {
   margin: 0;
   font-weight: bold;
   line-height: 18px;
+  color: #000;
 }
 .work_capture {
   margin-bottom: 10px;
 }
-.work_place,
+/*.work_place,
 .work_education,
 .work_subway {
   font-size: 14px;
   margin: 0;
+}*/
+.work_description{
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 10px;
 }
 .work_subway {
   padding-left: 25px;

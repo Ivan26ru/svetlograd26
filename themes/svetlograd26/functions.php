@@ -1,4 +1,6 @@
 <?php
+include (TEMPLATEPATH . '/moduls/functions/acf_meta_tax.php');
+include (TEMPLATEPATH . '/moduls/functions/foreach_tax_index.php');
 
 //
 // работа с меню сайта
@@ -105,7 +107,7 @@ class top_menu extends Walker_Nav_Menu {
         // var_dump($item);
         // var_dump($args);
     }
-}
+};
 
 
 class True_Walker_Nav_Menu extends Walker_Nav_Menu {
@@ -189,7 +191,7 @@ class True_Walker_Nav_Menu extends Walker_Nav_Menu {
         // var_dump($item);
         // var_dump($args);
     }
-}
+};
 
 
 //
@@ -204,7 +206,7 @@ if (!function_exists('add_scripts')) { // если ф-я уже есть в до
         wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js','','',true);
         wp_enqueue_script('bs4', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js','','',true);
         wp_enqueue_script('slick', get_template_directory_uri().'/libs/slick/slick.min.js','','',true);
-        wp_enqueue_script('my_scripts', get_template_directory_uri().'/js/my_scripts.js','','',true);
+        wp_enqueue_script('my_scripts', get_template_directory_uri().'/js/my_scripts.js?4','','',true);
     }
 };
 
@@ -213,12 +215,17 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
     function add_styles() { // добавление стилей
         if(is_admin()) return false; // если мы в админке - ничего не делаем
         wp_enqueue_style( 'bootstrap-4', get_template_directory_uri() . '/libs/bootstrap-4.0.0-dist/css/bootstrap.min.css' ); // бутстрап
-        wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/libs/font-awesome-4.7.0/css/font-awesome.min.css' ); // основные стили шаблона
-        wp_enqueue_style( 'slick', get_template_directory_uri() . '/libs/slick/slick.css' ); // основные стили шаблона
+        wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/libs/font-awesome-4.7.0/css/font-awesome.min.css' ); // иконки
+        wp_enqueue_style( 'slick', get_template_directory_uri() . '/libs/slick/slick.css' ); // библиотека слайдера
         wp_enqueue_style( '' ); // основные стили шаблона
         wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css' ); // основные стили шаблона
+        wp_enqueue_style( 'work', get_template_directory_uri() . '/css/work.css' ); // категория организации
+        wp_enqueue_style( 'the_flat', get_template_directory_uri() . '/css/the_flat.css' ); // запись организации
+        // wp_enqueue_style( 'flats', get_template_directory_uri() . '/css/flats.css' ); // запись организации
     }
 }
 
 
+// новые размеры миниатюр
+add_image_size('plashka_index_210', '210','210',false);
 ?>

@@ -134,4 +134,99 @@ jQuery(document).ready(function($) {
         // });
     });
 
+    // скрипты из файла the_flat
+
+    //   $('.vip_flats').slick({
+    //     infinite: true,
+    //     dots: true,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     autoplaySpeed: 3000,
+    //     arrows: true,
+    //     focusOnSelect: true,
+    //     pauseOnHover: true,
+    //     pauseOnDotsHover: true,
+    //     prevArrow: '<button class="slick-arrow slick-prev"><i class="fa fa-angle-left carousel-control-prev2" aria-hidden="true"></i></button>',
+    //     nextArrow: '<button class="slick-arrow slick-next"><i class="fa fa-angle-right carousel-control-next2" aria-hidden="true"></i></button>',
+    //     responsive: [{
+    //         breakpoint: 993,
+    //         settings: {
+    //           dots: false
+    //         }
+    //     }
+    //     ]
+    //   });
+    $('.vip_flats2').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        focusOnSelect: true,
+        pauseOnHover: true,
+        pauseOnDotsHover: true,
+        prevArrow: '<button class="slick-arrow slick-prev"><i class="fa fa-angle-left carousel-control-prev2" aria-hidden="true"></i></button>',
+        nextArrow: '<button class="slick-arrow slick-next"><i class="fa fa-angle-right carousel-control-next2" aria-hidden="true"></i></button>',
+        responsive: [{
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }
+        ]
+    });
+
+    $('.the_flat_slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.the_flat_slider-nav'
+    });
+
+    $('.the_flat_slider-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.the_flat_slider-for',
+        dots: false,
+        //centerMode: true,
+        focusOnSelect: true,
+        prevArrow: '<button class="slick-arrow slick-prev"><i class="fa fa-angle-left carousel-control-prev2" aria-hidden="true"></i></button>',
+        nextArrow: '<button class="slick-arrow slick-next"><i class="fa fa-angle-right carousel-control-next2" aria-hidden="true"></i></button>'
+        // responsive: [{
+        //     breakpoint: 576,
+        //     settings: {
+        //       slidesToShow: 3,
+        //       slidesToScroll: 1,
+        //       infinite: true,
+        //       dots: false
+        //     }
+        // }
+        // // {
+        // //     breakpoint: 576,
+        // //     settings: {
+        // //       slidesToShow: 2,
+        // //       slidesToScroll: 1,
+        // //       infinite: true,
+        // //       dots: false
+        // //     }
+        // // }
+        // ]
+    });
+
 }); //конец ready
