@@ -8,8 +8,8 @@
               <span class="gray">Однокомнатные</span>
             </p>
             <h3 class="buy_apartments">
-              <span>1-к квартира, 67,7 м</span>
-              <span class="buy_apartments_right">3 500 000 руб.</span>
+              <span><?php the_title(); ?></span>
+              <!-- <span class="buy_apartments_right">3 500 000 руб.</span> -->
             </h3>
             <?php
 $images = get_field('foto_all');
@@ -49,6 +49,50 @@ if( $images ): ?>
                 <li><span class="info_name">name09</span><span class="info_value">value009</span></li>
                 <li><span class="info_name">name10</span><span class="info_value">value010</span></li>
               </ul>
+              <div class="rejim">
+              	<?php if( have_rows('rejim') ): ?>
+
+	<ul class="rejim_ul">
+
+<?php
+$arr_1_7[1]= 'Понедельник';
+$arr_1_7[2]= 'Вторник';
+$arr_1_7[3]= 'Среда';
+$arr_1_7[4]= 'Четверг';
+$arr_1_7[5]= 'Пятница';
+$arr_1_7[6]= 'Суббота';
+$arr_1_7[7]= 'Воскресенье';
+?>
+	<?php while( have_rows('rejim') ): the_row();
+
+		// vars
+		$den_s = get_sub_field('den_s');
+		$den_do = get_sub_field('den_do');
+		$work_s = get_sub_field('work_s');
+		$work_do = get_sub_field('work_do');
+		$obed_s = get_sub_field('obed_s');
+		$obed_do = get_sub_field('obed_do');
+echo '<li>';
+if (strlen($work_s)>0) {
+	echo 'Работает: ' . $arr_1_7[$den_s] . ' - ' . $arr_1_7[$den_do] . ', время работы: ' . $work_s . ' - ' . $work_do. ', обед: ' . $obed_s . ' - ' . $obed_do;
+}elseif($den_s===$den_do){
+	echo 'Выходной: ' . $arr_1_7[$den_s];
+
+}else{
+	echo 'Выходные: ' . $arr_1_7[$den_s] . ' - ' . $arr_1_7[$den_do];
+
+}
+
+echo '</li>';
+		?>
+
+
+	<?php endwhile; ?>
+
+	</ul>
+
+<?php endif; ?>
+              </div>
             </div>
               <div class="row">
                 <div class="col-6">
