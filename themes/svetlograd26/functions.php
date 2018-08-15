@@ -217,11 +217,7 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
         wp_enqueue_style( 'bootstrap-4', get_template_directory_uri() . '/libs/bootstrap-4.0.0-dist/css/bootstrap.min.css' ); // бутстрап
         wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/libs/font-awesome-4.7.0/css/font-awesome.min.css' ); // иконки
         wp_enqueue_style( 'slick', get_template_directory_uri() . '/libs/slick/slick.css' ); // библиотека слайдера
-        wp_enqueue_style( '' ); // основные стили шаблона
         wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css' ); // основные стили шаблона
-        wp_enqueue_style( 'work', get_template_directory_uri() . '/css/work.css' ); // категория организации
-        wp_enqueue_style( 'the_flat', get_template_directory_uri() . '/css/the_flat.css' ); // запись организации
-        // wp_enqueue_style( 'flats', get_template_directory_uri() . '/css/flats.css' ); // запись организации
     }
 }
 
