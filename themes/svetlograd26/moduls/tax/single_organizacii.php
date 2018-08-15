@@ -3,10 +3,12 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-8">
-            <p class="all_announcements">
-              Все обьявления в Москве / Недвижимость / Квартиры /
-              <span class="gray">Однокомнатные</span>
-            </p>
+              <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
             <h3 class="buy_apartments">
               <span><?php the_title(); ?></span>
               <!-- <span class="buy_apartments_right">3 500 000 руб.</span> -->
