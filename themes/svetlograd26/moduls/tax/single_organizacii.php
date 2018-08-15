@@ -37,6 +37,40 @@ if( $images ): ?>
             </p>
             <div class="container">
             <div class="row">
+            	<div class="features">
+  <h4 class="features__title">Квартира</h4>
+  <ul class="features__list">
+    <li class="features__item">
+      <span class="features__prop">Количество комнат</span>
+      <span class="features__value">3</span>
+    </li>
+    <li class="features__item">
+      <span class="features__prop">Этаж</span>
+      <span class="features__value">5 из 23</span>
+    </li>
+    <li class="features__item">
+      <span class="features__prop">Общая площадь</span>
+      <span class="features__value">63,4 м<sup>2</sup></span>
+    </li>
+    <li class="features__item">
+      <span class="features__prop">Площадь кухни</span>
+      <span class="features__value">11 м<sup>2</sup></span>
+    </li>
+    <li class="features__item">
+      <span class="features__prop">Жилая площадь</span>
+      <span class="features__value">48 м<sup>2</sup></span>
+    </li>
+    <li class="features__item">
+      <span class="features__prop">Санузел</span>
+      <span class="features__value">раздельный</span>
+    </li>
+    <li class="features__item">
+      <span class="features__prop">Балкон</span>
+      <span class="features__value">да</span>
+    </li>
+  </ul>
+</div>
+            	<hr>
               <ul class="info_list">
                 <li><span class="info_name">name01</span><span class="info_value">value001</span></li>
                 <li><span class="info_name">name02</span><span class="info_value">value002</span></li>
