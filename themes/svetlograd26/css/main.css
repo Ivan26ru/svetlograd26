@@ -5150,3 +5150,52 @@ nav.pagination_block {
         font-size: 0.7rem
     }
 }
+
+
+/*Стили для списка с чертой, критерии*/
+* {
+  box-sizing: border-box;
+}
+.features {
+  max-width: 500px;
+  padding: 30px;
+  background-color: #F9F9F9;
+}
+.features__title {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.features__item {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+.features__item + .features__item {
+  margin-top: 12px;
+}
+.features__prop {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+}
+.features__prop::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  margin-top: auto;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  background-color: #e7e7e7;
+}
+.features__value {
+  width: 120px;
+  margin-left: 30px;
+}
