@@ -560,7 +560,7 @@ ul.slick-dots li.slick-active {
     text-transform: uppercase
 }
 
-.sssa {
+.sssa_index {
     border: 1px solid #a300e5;
     border-radius: 5px;
     display: block;
@@ -578,34 +578,34 @@ ul.slick-dots li.slick-active {
     margin-top: 15px
 }
 
-img.sssa_images {
+img.sssa_index_images {
     width: 100%;
     display: block
 }
 
-p.sssa_description {
+p.sssa_index_description {
     text-align: center;
     margin: auto;
     padding: 15px 18px;
     font-size: 1em
 }
 
-.sssa_description_block {
+.sssa_index_description_block {
     display: table;
     width: 100%;
     height: 100px
 }
 
-.sssa_description_block p.sssa_description {
+.sssa_index_description_block p.sssa_index_description {
     display: table-cell;
     vertical-align: middle
 }
 
-.col-6.col-md-4.col-lg-3.p-3 p.sssa_description {
+.col-6.col-md-4.col-lg-3.p-3 p.sssa_index_description {
     min-height: 80px
 }
 
-.sssa_hover {
+.sssa_index_hover {
     position: absolute;
     top: 0;
     width: 100%;
@@ -614,7 +614,7 @@ p.sssa_description {
     display: none
 }
 
-div.sssa:hover a.sssa_hover {
+div.sssa_index:hover a.sssa_index_hover {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -623,7 +623,7 @@ div.sssa:hover a.sssa_hover {
     text-decoration: none
 }
 
-div.dating_service:hover a.sssa_hover {
+div.dating_service:hover a.sssa_index_hover {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -632,7 +632,7 @@ div.dating_service:hover a.sssa_hover {
     text-decoration: none
 }
 
-p.sssa_hover_description {
+p.sssa_index_hover_description {
     color: #fff;
     text-align: center;
     font-size: 1.3em;
@@ -1227,7 +1227,7 @@ p.copy {
 }
 
 @media (max-width:480px) {
-    p.sssa_hover_description {
+    p.sssa_index_hover_description {
         font-size: 1em
     }
 }
@@ -1320,7 +1320,7 @@ p.copy {
     span.on_the_rights {
         font-size: 0.5rem
     }
-    p.sssa_description {
+    p.sssa_index_description {
         font-size: 0.8rem
     }
     .indoor_units_text_left {
@@ -1419,7 +1419,7 @@ p.copy {
     #add_advert {
         padding-left: 22px
     }
-    p.sssa_description {
+    p.sssa_index_description {
         font-size: 0.6rem
     }
     .shadow__indoor_units_img_right {
@@ -1491,7 +1491,7 @@ p.copy {
 }
 
 @media (max-width:270px) {
-    p.sssa_description {
+    p.sssa_index_description {
         font-size: 0.5rem
     }
 }

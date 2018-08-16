@@ -11,7 +11,7 @@ function slova_plashka($name_tax_cat,$id_tax_cat){
      foreach($rows as $row)
      {
 
-         echo '<p class="sssa_hover_description">' . $row['slovo'] . '</p>';
+         echo '<p class="sssa_index_hover_description">' . $row['slovo'] . '</p>';
      }
  }
 
