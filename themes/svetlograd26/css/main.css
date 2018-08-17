@@ -10,7 +10,7 @@ a {
     width: 980px;
     margin: 0 auto;
     background: #f9f9f9 url(../images/bg-new.png) no-repeat;
-    background-size: contain;
+    background-size: cover;
     font-family: "Open Sans";
     font-weight: 400;
     box-shadow: 0 4px 17px 1px rgba(0, 0, 0, 0.2);
@@ -156,7 +156,7 @@ header {
 }
 
 section.nav {
-    padding: 20px 15px 25px 15px;
+    padding: 20px 15px 5px 15px;
     border-bottom: 1px solid #ccc
 }
 
@@ -198,7 +198,7 @@ ul.menu .nav-item a:hover {
 }
 
 .navbar {
-    margin: -15px auto 15px auto;
+    /*margin: -15px auto 15px auto;*/
     font-size: 1rem;
     color: #000;
     font-weight: bold;
@@ -1525,7 +1525,7 @@ h3.buy_apartments {
 }
 
 span.violet {
-    font-size: 14px
+    /*font-size: 14px*/
 }
 
 .buy_apartment_figures {
@@ -2144,10 +2144,6 @@ h3.buy_apartments {
     display: -ms-flex;
     display: flex;
     justify-content: flex-start;
-}
-
-span.violet {
-    font-size: 14px;
 }
 
 .buy_apartment_figures {
