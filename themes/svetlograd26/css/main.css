@@ -1717,8 +1717,9 @@ section.vip_ads_flats {
 
 .slick-slide {
     padding: 0 10px;
-    width: 100%;
-    height: 305px
+    /*Убрал*/
+    /*width: 100%;*/
+    /*height: 305px*/
 }
 
 .slick-arrow.slick-prev {
@@ -2338,7 +2339,8 @@ section.vip_ads_flats {
 
 .slick-slide {
     padding: 0 10px;
-    width: 100%;
+    /*убрал*/
+    /*width: 100%;*/
     /*height: 305px;*/
 }
 
