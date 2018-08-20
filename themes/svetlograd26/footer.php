@@ -58,7 +58,7 @@
         <!-- /.row -->
       </div>
       <!-- /.container -->
-      <div class="making">Сайт изготовлен студией<a href="#" target="_blank"> 8bit-studio</a></div>
+      <div class="making">Сайт изготовлен студией <a href="#" target="_blank">8bit-studio</a></div>
     </footer>
     </div>
     <!-- .wrapper -->
