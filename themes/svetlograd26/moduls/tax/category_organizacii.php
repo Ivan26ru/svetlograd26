@@ -31,11 +31,11 @@ while( $query->have_posts() ) {
 <!--                 <div class="work_icons crown"></div>
                 <div class="work_icons star"></div>
                 <div class="work_icons up"></div> -->
-                <div class="work_icons square"></div>
+                <!-- <div class="work_icons square"></div> -->
               </div>
-              <p class="work_description area">работает/закрыто/обед</p>
-              <p class="floor_number">18/<span>23</span> эт.</p>
-              <p class="work_description date_placement">сегодня 16:39</p>
+              <!-- <p class="work_description area">работает/закрыто/обед</p> -->
+              <!-- <p class="floor_number">18/<span>23</span> эт.</p> -->
+              <p class="work_description date_placement">добавлено: сегодня 16:39</p>
             </div>
         </div>
 
