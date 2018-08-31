@@ -215,9 +215,10 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
     function add_styles() { // добавление стилей
         if(is_admin()) return false; // если мы в админке - ничего не делаем
         wp_enqueue_style( 'bootstrap-4', get_template_directory_uri() . '/libs/bootstrap-4.0.0-dist/css/bootstrap.min.css' ); // бутстрап
+        wp_enqueue_style( 'main', get_template_directory_uri().'/style.css?' . date("U") ); // основные стили шаблона
         wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/libs/font-awesome-4.7.0/css/font-awesome.min.css' ); // иконки
         wp_enqueue_style( 'slick', get_template_directory_uri() . '/libs/slick/slick.css' ); // библиотека слайдера
-        wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css?' . date("U") ); // основные стили шаблона
+        // wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css?' . date("U") ); // основные стили шаблона
     }
 }
 
