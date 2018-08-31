@@ -56,7 +56,7 @@ if( have_rows('rejim') ):
 
 if ($attr['html']==='category') {
 	// чистый код
-	echo '<ul>';
+	echo '<ul class="rejim_category">';
 
 	// перебор данного произвольного поля
 	while( have_rows('rejim') ): the_row();
@@ -70,11 +70,11 @@ if ($attr['html']==='category') {
 
 		echo '<li>';
 	if (strlen($work_s)>0) {
-		echo $arr_1_7[$den_s] . ' - ' . $arr_1_7[$den_do] . ', время работы: ' . $work_s . ' - ' . $work_do. ', обед: ' . $obed_s . ' - ' . $obed_do;
+		echo $arr_1_7[$den_s] . ' - ' . $arr_1_7[$den_do] . ': ' . $work_s . ' - ' . $work_do. '</li><li>обед: ' . $obed_s . ' - ' . $obed_do;
 	}elseif($den_s===$den_do){
-		echo 'Выходной: ' . $arr_1_7[$den_s];
+		echo 'выходной: ' . $arr_1_7[$den_s];
 	}else{
-		echo 'Выходные: ' . $arr_1_7[$den_s] . ' - ' . $arr_1_7[$den_do];
+		echo 'выходные: ' . $arr_1_7[$den_s] . ' - ' . $arr_1_7[$den_do];
 	}
 		echo '</li>';
 	endwhile;
