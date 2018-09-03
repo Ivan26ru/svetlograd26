@@ -17,6 +17,40 @@ function slova_plashka($name_tax_cat,$id_tax_cat){
 
 }
 
+function tel(){
+	// Проверяет наличие прозвольного поля
+if( have_rows('tel_repeat') ):
+$nomer=0;
+	// перебор данного произвольного поля
+	while( have_rows('tel_repeat') ): the_row();
+		echo '<li class="features__item"><span class="features__prop">Телефон ' . ++$nomer . '</span><span class="features__value">';
+
+		$tel = get_sub_field('tel');
+		$tel_text = $tel;
+		$tel_number = $tel;
+		if (iconv_strlen($tel)===5) {
+			$tel_text='8(86547)' . $tel;
+			$tel_number='886547' . $tel;
+		};
+		echo '<a href="tel:'. $tel_number.'">' . $tel_text . '</a>';
+		echo '</span></li>';
+	endwhile;
+
+
+endif;//Проверка наличия произвольного поля
+};
+
+function ulica(){
+	$cur_terms = get_the_terms( $post->ID, 'ulica' );
+	foreach( $cur_terms as $cur_term ){
+	  echo '<a href="'. get_term_link( (int)$cur_term->term_id, $cur_term->taxonomy ) .'">'. $cur_term->name .'</a>,';
+	}
+}
+
+function adress(){
+$acf_adress=get_field('adress');
+echo $acf_adress;
+}
 // миниатюра плашки
 function url_img_plashka($name_tax_cat,$id_tax_cat){
 	$image = get_field( 'img_cat', $name_tax_cat . '_' . $id_tax_cat);

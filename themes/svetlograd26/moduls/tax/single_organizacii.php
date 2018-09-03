@@ -40,39 +40,15 @@ if( $images ): ?>
             <div class="container">
             <div class="row">
             	<div class="features">
-  <h4 class="features__title">Квартира</h4>
+  <h4 class="features__title">Данные организации</h4>
   <ul class="features__list">
     <li class="features__item">
-      <span class="features__prop">Количество комнат</span>
-      <span class="features__value">3</span>
+      <span class="features__prop">Адрес</span>
+      <span class="features__value">Светлоград,<br><?php ulica(); ?><br><?php adress(); ?></span>
     </li>
-    <li class="features__item">
-      <span class="features__prop">Этаж</span>
-      <span class="features__value">5 из 23</span>
-    </li>
-    <li class="features__item">
-      <span class="features__prop">Общая площадь</span>
-      <span class="features__value">63,4 м<sup>2</sup></span>
-    </li>
-    <li class="features__item">
-      <span class="features__prop">Площадь кухни</span>
-      <span class="features__value">11 м<sup>2</sup></span>
-    </li>
-    <li class="features__item">
-      <span class="features__prop">Жилая площадь</span>
-      <span class="features__value">48 м<sup>2</sup></span>
-    </li>
-    <li class="features__item">
-      <span class="features__prop">Санузел</span>
-      <span class="features__value">раздельный</span>
-    </li>
-    <li class="features__item">
-      <span class="features__prop">Балкон</span>
-      <span class="features__value">да</span>
-    </li>
+<?php tel(); ?>
   </ul>
 </div>
-
 <?php rejim_raboti(array('html'=>'single', )); ?>
             </div>
             </div>
