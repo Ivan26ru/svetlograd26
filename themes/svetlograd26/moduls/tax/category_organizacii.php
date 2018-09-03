@@ -22,13 +22,14 @@ while( $query->have_posts() ) {
               <a href="<?php echo get_permalink($query->post->ID ); ?>" class="work_capture"><?php echo get_the_title( $query->post->ID ); ?></a>
               <p class="work_description work_place">Тип организации (Ломбард)</p>
               <!-- <p class="work_description work_education">Режим работы: вт-чт 8.00-16.00 пт 8.00-12.00 сб-вс выходной, обед 12.00-13.00</p> -->
-              <p class="work_description">Светлоград, <?php ulica(); ?>, <?php adress(); ?></p>
+              <p class="work_description">Светлоград, <?php ulica(); ?> <?php adress(); ?></p>
+              <?php tel(array('type' => 'category', )); ?>
               <!-- <p class="work_price">30 000 руб.</p> -->
             </div>
             <div class="work_right_block">
               <div class="work_icons_container">
-              <?php rejim_raboti(array('html'=>'category', 'day'=> 'small',)); ?>
-<!--                 <div class="work_icons crown"></div>
+              <?php rejim_raboti(array('type'=>'category', 'day'=> 'small',)); ?>
+            <!--<div class="work_icons crown"></div>
                 <div class="work_icons star"></div>
                 <div class="work_icons up"></div> -->
                 <!-- <div class="work_icons square"></div> -->

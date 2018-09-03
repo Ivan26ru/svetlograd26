@@ -40,46 +40,22 @@ if( $images ): ?>
             <div class="container">
             <div class="row">
             	<div class="features">
-  <h4 class="features__title">Данные организации</h4>
-  <ul class="features__list">
-    <li class="features__item">
-      <span class="features__prop">Адрес</span>
-      <span class="features__value">Светлоград,<br><?php ulica(); ?><br><?php adress(); ?></span>
-    </li>
-<?php tel(); ?>
-  </ul>
-</div>
-<?php rejim_raboti(array('html'=>'single', )); ?>
+                <h4 class="features__title">Данные организации</h4>
+                <ul class="features__list">
+                  <li class="features__item">
+                    <span class="features__prop">Адрес</span>
+                    <span class="features__value">Светлоград,<br><?php ulica(); ?><br><?php adress(); ?></span>
+                  </li>
+                  <?php tel(array('type' => 'post', )); ?>
+                </ul>
+              </div>
+              <?php rejim_raboti(array('type'=>'post', )); ?>
             </div>
             </div>
           </div>
 
           <div class="col-12 col-lg-4">
-            <section class="vip_ads_flats">
-              <h2 class="vip_ads_caption">VIP ОБЪЯВЛЕНИЯ</h2>
-              <div class="vip_flats">
-                <div class="vip_slide_1">
-                  <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-                  <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
-                  <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide3.jpg" alt="">
-                </div>
-                <div class="vip_slide_2">
-                  <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide3.jpg" alt="">
-                  <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-                  <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
-                </div>
-              </div>
-              <!-- слайдер для адаптива -->
-              <div class="vip_flats2">
-                <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide3.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide3.jpg" alt="">
-              </div>
-            </section>
-            <!-- /.vip_ads -->
+            <?php include (TEMPLATEPATH . '/moduls/index/ads-vip.php'); ?>
           </div>
         </div>
         <!-- /.row -->
