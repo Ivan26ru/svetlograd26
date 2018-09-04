@@ -26,8 +26,6 @@ function tel($attr = []){
 		$nomer=0;
 			// перебор данного произвольного поля
 			while( have_rows('tel_repeat') ): the_row();
-				// echo '<li class="features__item"><span class="features__prop">Телефон ' . ++$nomer . '</span><span class="features__value">';
-
 				$tel = get_sub_field('tel');
 				$tel_text = $tel;
 				$tel_number = $tel;
@@ -36,7 +34,6 @@ function tel($attr = []){
 					$tel_number='886547' . $tel;
 				};
 				echo '<a href="tel:'. $tel_number.'">' . $tel_text . '</a><br>';
-				// echo '</span></li>';
 			endwhile;
 		endif;//Проверка наличия произвольного поля
 
@@ -44,10 +41,15 @@ function tel($attr = []){
 
 			// Проверяет наличие прозвольного поля
 		if( have_rows('tel_repeat') ):
-		$nomer=0;
+		$nomer=1;
 			// перебор данного произвольного поля
 			while( have_rows('tel_repeat') ): the_row();
-				echo '<li class="features__item"><span class="features__prop">Телефон ' . ++$nomer . '</span><span class="features__value">';
+				echo '<li class="features__item"><span class="features__prop">Телефон';
+				if ($nomer>1) {
+					echo ' '.$nomer;
+				};
+				 ++$nomer;
+				echo '</span><span class="features__value">';
 
 				$tel = get_sub_field('tel');
 				$tel_text = $tel;
