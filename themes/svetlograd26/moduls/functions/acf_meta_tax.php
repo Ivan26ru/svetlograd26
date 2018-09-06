@@ -17,6 +17,44 @@ function slova_plashka($name_tax_cat,$id_tax_cat){
 
 }
 
+// вывод прочих данных
+function acf_other($attr = []){
+	$acf_name='dop_info';// название произвольного поля
+	$sub_field_1='name';
+	$sub_field_2='value';
+
+	// выбор режима
+	if ($attr['type']==='category') {
+	// Проверяет наличие прозвольного поля
+		if( have_rows($acf_name) ):
+		$nomer=0;
+			// перебор данного произвольного поля
+			while( have_rows($acf_name) ): the_row();
+				$field1 = get_sub_field($sub_field_1);
+				$field2 = get_sub_field($sub_field_2);
+			endwhile;
+		endif;//Проверка наличия произвольного поля
+
+	}elseif($attr['type']==='post'){
+
+			// Проверяет наличие прозвольного поля
+		if( have_rows($acf_name) ):
+			echo '<div class="features"><h4 class="features__title">Дополнительная информация</h4><ul class="features__list">';
+			// перебор данного произвольного поля
+			while( have_rows($acf_name) ): the_row();
+				$field1 = get_sub_field($sub_field_1);
+				$field2 = get_sub_field($sub_field_2);
+				echo '<li class="features__item"><span class="features__prop">'.$field1 . '</span><span class="features__value">'. $field2 . '<span></li>';
+			endwhile;
+			echo '</ul></div>';
+		endif;//Проверка наличия произвольного поля
+	};//условие выбора режима
+};
+
+
+
+
+
 // вывод телефона
 function tel($attr = []){
 	// выбор режима
@@ -62,7 +100,7 @@ function tel($attr = []){
 				echo '</span></li>';
 			endwhile;
 		endif;//Проверка наличия произвольного поля
-};//условие выбора режима
+	};//условие выбора режима
 };
 
 // вывод улицы

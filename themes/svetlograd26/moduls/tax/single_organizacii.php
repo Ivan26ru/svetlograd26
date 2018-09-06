@@ -50,6 +50,7 @@ if( $images ): ?>
                 </ul>
               </div>
               <?php rejim_raboti(array('type'=>'post', )); ?>
+              <?php acf_other(array('type'=>'post', )); ?>
             </div>
             </div>
           </div>
