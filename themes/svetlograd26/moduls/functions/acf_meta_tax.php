@@ -62,6 +62,8 @@ function tel($attr = []){
 	// Проверяет наличие прозвольного поля
 		if( have_rows('tel_repeat') ):
 		$nomer=0;
+		echo '<p class="tel_a_category">';
+
 			// перебор данного произвольного поля
 			while( have_rows('tel_repeat') ): the_row();
 				$tel = get_sub_field('tel');
@@ -71,8 +73,13 @@ function tel($attr = []){
 					$tel_text='8(86547)' . $tel;
 					$tel_number='886547' . $tel;
 				};
-				echo '<a href="tel:'. $tel_number.'">' . $tel_text . '</a><br>';
+				if ($nomer>0) {
+					echo ", ";
+				};
+				$nomer++;
+				echo '<a href="tel:'. $tel_number.'" class="tel_a_category">' . $tel_text . '</a>';
 			endwhile;
+			echo '</p>';
 		endif;//Проверка наличия произвольного поля
 
 	}elseif($attr['type']==='post'){
