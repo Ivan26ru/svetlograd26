@@ -1,4 +1,5 @@
 <?php
+include (TEMPLATEPATH . '/moduls/functions/other_functions.php');
 include (TEMPLATEPATH . '/moduls/functions/acf_meta_tax.php');
 include (TEMPLATEPATH . '/moduls/functions/foreach_tax_index.php');
 
