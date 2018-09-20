@@ -52,9 +52,6 @@ function acf_other($attr = []){
 };
 
 
-
-
-
 // вывод телефона
 function tel($attr = []){
 	// выбор режима
@@ -67,17 +64,17 @@ function tel($attr = []){
 			// перебор данного произвольного поля
 			while( have_rows('tel_repeat') ): the_row();
 				$tel = get_sub_field('tel');
-				$tel_text = $tel;
-				$tel_number = $tel;
-				if (iconv_strlen($tel)===5) {
-					$tel_text='8(86547)' . $tel;
-					$tel_number='886547' . $tel;
-				};
+
 				if ($nomer>0) {
 					echo ", ";
 				};
+
 				$nomer++;
-				echo '<a href="tel:'. $tel_number.'" class="tel_a_category">' . $tel_text . '</a>';
+				echo '<a href="tel:'
+				. phone_read($tel,"number")
+				. '" class="tel_a_category">'
+				. phone_read($tel,"text")
+				. '</a>';
 			endwhile;
 			echo '</p>';
 		endif;//Проверка наличия произвольного поля
@@ -86,25 +83,26 @@ function tel($attr = []){
 
 			// Проверяет наличие прозвольного поля
 		if( have_rows('tel_repeat') ):
-		$nomer=1;
+		$nomer=1;//счетчик
+
 			// перебор данного произвольного поля
 			while( have_rows('tel_repeat') ): the_row();
+				$tel = get_sub_field('tel');
+
 				echo '<li class="features__item"><span class="features__prop">Телефон';
+
 				if ($nomer>1) {
 					echo ' '.$nomer;
 				};
 				 ++$nomer;
-				echo '</span><span class="features__value">';
 
-				$tel = get_sub_field('tel');
-				$tel_text = $tel;
-				$tel_number = $tel;
-				if (iconv_strlen($tel)===5) {
-					$tel_text='8(86547)' . $tel;
-					$tel_number='886547' . $tel;
-				};
-				echo '<a href="tel:'. $tel_number.'">' . $tel_text . '</a>';
-				echo '</span></li>';
+				echo '</span><span class="features__value">'
+				. '<a href="tel:'
+				. phone_read($tel,"number")
+				. '">'
+				. phone_read($tel,"text")
+				. '</a>'
+				. '</span></li>';
 			endwhile;
 		endif;//Проверка наличия произвольного поля
 	};//условие выбора режима
@@ -116,13 +114,13 @@ function ulica(){
 	foreach( $cur_terms as $cur_term ){
 	  echo '<a href="'. get_term_link( (int)$cur_term->term_id, $cur_term->taxonomy ) .'">'. $cur_term->name .'</a>,';
 	}
-}
+};
 
 // вывод адреса без улицы, то есть //дом 5 кв 7
 function adress(){
 $acf_adress=get_field('adress');
 echo $acf_adress;
-}
+};
 
 // миниатюра плашки
 function url_img_plashka($name_tax_cat,$id_tax_cat){
@@ -131,7 +129,7 @@ function url_img_plashka($name_tax_cat,$id_tax_cat){
     if( $image ) {
     echo wp_get_attachment_image_url( $image,'plashka_index_210');
     }
-}
+};
 
 // режим работы функция из организаций
 // ['day'] сокращенные названия типа пн, вт, ср (по у молчанию длинные то есть понедельник, вторник)
