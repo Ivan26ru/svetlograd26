@@ -9,6 +9,7 @@ include (TEMPLATEPATH . '/moduls/functions/foreach_tax_index.php');
 
 register_nav_menus(array( // Регистрируем 2 меню
     'top' => 'Верхнее меню', // Верхнее
+    'social' => 'Соц сети', //социалки
     'footer-1' => 'подвал 1',
     'footer-2' => 'подвал 2',
     'footer-3' => 'подвал 3',
