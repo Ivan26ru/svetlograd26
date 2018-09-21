@@ -107,13 +107,13 @@ header {
 .social_networks {
     border: 1px solid #a300e5;
     border-radius: 5px;
-    display: -webkit-flex;
+/*    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;*/
     margin-bottom: 20px;
-    width: 135px;
+    /*width: 135px;*/
     float: right;
     height: 30px;
     background: #fff
@@ -127,13 +127,13 @@ header {
     color: #a300e5;
     border: 2px solid #a300e5;
     border-radius: 50%;
-    display: -webkit-flex;
+    /*display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     -webkit-justify-content: center;
     justify-content: center;
     -webkit-align-items: center;
-    align-items: center;
+    align-items: center;*/
     background: #fff
 }
 
@@ -749,11 +749,11 @@ span.violet {
 
 .why_100 {
     border-right: 1px solid #c2c2c2;
-    height: 280px
+    /*height: 280px*/
 }
 
 .why_100_block {
-    height: 270px
+    /*height: 270px*/
 }
 
 .why_100_block_left {
@@ -5351,4 +5351,19 @@ nav.pagination_block {
 
 .rejim_category li{
     list-style:none;
+}
+
+
+.menu_social{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    outline:1px solid red;
+    padding: 3px;
+    margin: 0;
+}
+
+.menu_social li{
+    list-style:none;
+    padding: 0 3px;
 }
