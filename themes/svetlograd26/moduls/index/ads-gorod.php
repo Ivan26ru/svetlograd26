@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3">
-        <a href="#" class="cities">Балыкчы</a>
+        <a href="#" class="cities">Светлоград</a>
         <!-- /.cities -->
         <a href="#" class="cities">Бишкек</a>
         <!-- /.cities -->
