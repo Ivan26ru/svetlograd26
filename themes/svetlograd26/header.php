@@ -51,7 +51,8 @@
             </a>
           </div>
           <div class="col-12 col-md-3 col-xl-2">
-            <div class="social_networks">
+          <?php include (TEMPLATEPATH . '/moduls/menu/menu-social.php'); ?>
+            <!-- <div class="social_networks">
               <a href="#">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
@@ -64,8 +65,8 @@
               <a href="#">
                 <i class="fa fa-skype" aria-hidden="true"></i>
               </a>
-            </div>
-            <div href="#" id="entrance">ВХОД/РЕГИСТРАЦИЯ</div>
+            </div> -->
+            <!-- <div href="#" id="entrance">ВХОД/РЕГИСТРАЦИЯ</div> -->
           </div>
         </div>
         <!-- /.row -->
@@ -78,4 +79,3 @@
     </section>
     <!-- /.nav -->
       <?php //include (TEMPLATEPATH . '/moduls/carausel/carausel-top.php'); ?>
-    
