@@ -43,7 +43,9 @@ while( $query->have_posts() ) {
 <?php
 }
 // Восстанавливаем оригинальные данные поста
-wp_reset_postdata();
+// wp_reset_postdata();
+pagination();
+
 ?>
         <nav class="pagination_block" aria-label="Page navigation example">
           <ul class="pagination justify-content-center">

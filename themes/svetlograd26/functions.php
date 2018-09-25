@@ -2,6 +2,7 @@
 include (TEMPLATEPATH . '/moduls/functions/other_functions.php');
 include (TEMPLATEPATH . '/moduls/functions/acf_meta_tax.php');
 include (TEMPLATEPATH . '/moduls/functions/foreach_tax_index.php');
+include (TEMPLATEPATH . '/moduls/functions/pagination.php');
 
 //
 // работа с меню сайта
@@ -227,4 +228,6 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
 
 // новые размеры миниатюр
 add_image_size('plashka_index_210', '210','210',false);
+
+
 ?>
