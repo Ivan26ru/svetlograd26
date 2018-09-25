@@ -4296,12 +4296,18 @@ nav.pagination_block {
     .work_place,
     .work_education,
     .work_subway {
-        font-size: 12px;
-        margin-top: 8px;
+        /*font-size: 12px;*/
+        /*margin-top: 8px;*/
     }
     .work_subway:before {
         top: 0;
     }
+
+    /*Ivan*/
+    .work_containers{
+    	height: auto;
+    }
+    /*!Ivan*/
 }
 
 @media (max-width: 450px) {
@@ -4313,7 +4319,7 @@ nav.pagination_block {
     .work_education,
     .work_subway,
     p.date_placement {
-        font-size: 10px;
+        /*font-size: 10px;*/
     }
 }
 
