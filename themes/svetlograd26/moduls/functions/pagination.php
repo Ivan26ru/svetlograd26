@@ -8,8 +8,8 @@ if (!function_exists('pagination')) { // если ф-я уже есть в до�
 			'format' => '?paged=%#%', // формат, %#% будет заменено
 			'current' => max(1, get_query_var('paged')), // текущая страница, 1, если $_GET['page'] не определено
 			'type' => 'array', // нам надо получить массив
-			'prev_text'    => 'Назад', // текст назад
-	    	'next_text'    => 'Вперед', // текст вперед
+			'prev_text'    => '&laquo;', // текст назад
+	    	'next_text'    => '&raquo;', // текст вперед
 			'total' => $wp_query->max_num_pages, // общие кол-во страниц в пагинации
 			'show_all'     => false, // не показывать ссылки на все страницы, иначе end_size и mid_size будут проигнорированны
 			'end_size'     => 15, //  сколько страниц показать в начале и конце списка (12 ... 4 ... 89)
@@ -20,37 +20,15 @@ if (!function_exists('pagination')) { // если ф-я уже есть в до�
 			'after_page_number' => '' // строка после цифры
 		));
 	 	if( is_array( $links ) ) { // если пагинация есть
-		    echo '<ul class="pagination">';
+		    echo '<nav class="pagination_block">
+          <ul class="pagination justify-content-center">';
 		    foreach ( $links as $link ) {
-		    	if ( strpos( $link, 'current' ) !== false ) echo "<li class='active'>$link</li>"; // если это активная страница
-		        else echo "<li>$link</li>";
+		    	if ( strpos( $link, 'current' ) !== false ) echo "<li class='page-item active'>$link</li>"; // если это активная страница
+		        else echo "<li class='page-item'>$link</li>";
 		    }
-		   	echo '</ul>';
+		   	echo '</ul></nav>';
 		 }
 	}
-};
-
-
-function my_pagenavi() {
-  global $wp_query;
-
-  $big = 999999999; // уникальное число для замены
-
-  $args = array(
-    'base'    => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-    'prev_text' => '&laquo;',
-    'next_text' => '&raquo;',
-    'format'  => '',
-    'current' => max( 1, get_query_var('paged') ),
-    'total'   => $wp_query->max_num_pages,
-  );
-
-  $result = paginate_links( $args );
-
-  // удаляем добавку к пагинации для первой страницы
-  $result = str_replace( '/page/1/', '', $result );
-
-  echo $result;
 };
 
 ?>
