@@ -51,7 +51,7 @@
             </a>
           </div>
           <div class="col-12 col-md-3 col-xl-2">
-          <?php include (TEMPLATEPATH . '/moduls/menu/menu-social.php'); ?>
+          <?php //include (TEMPLATEPATH . '/moduls/menu/menu-social.php'); ?>
             <!-- <div class="social_networks">
               <a href="#">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
