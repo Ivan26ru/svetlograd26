@@ -20,6 +20,6 @@
       </div>
       <!-- <p class="work_description area">работает/закрыто/обед</p> -->
       <!-- <p class="floor_number">18/<span>23</span> эт.</p> -->
-      <p class="work_description date_placement">добавлено: <?php the_date(); ?></p>
+      <?php the_date('','<p class="work_description date_placement">добавлено: ','</p>'); ?>
     </div>
 </div>
