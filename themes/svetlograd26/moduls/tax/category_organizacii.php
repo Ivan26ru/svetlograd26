@@ -7,19 +7,17 @@ $args = array(
   // 'post_type' => 'post_organizacii',
   'category_organizacii'=>$term->slug
 );
-
 $query = new WP_Query( $args );
+if($query->have_posts()) {
+	while($query->have_posts()){ $query->the_post();
+		$post_id = $query->post->ID;
+		include (TEMPLATEPATH . '/moduls/tax/loop_tax.php');
+	};
 
-while( $query->have_posts() ) {
-  $query->next_post();
-
-include (TEMPLATEPATH . '/moduls/tax/loop_tax.php');
-
-}
 pagination();
-
 // Восстанавливаем оригинальные данные поста
 wp_reset_postdata();
+};
 ?>
     </div>
       <!--container-->
