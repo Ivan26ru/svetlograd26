@@ -1,16 +1,16 @@
 <?php //шаблон вывода циклом таксономии ?>
-<div class="work_containers">
-    <div class="work_images">
+<div class="work_containers row">
+    <div class="work_images1 col-3">
       <img src="<?php echo get_template_directory_uri();  ?>/images/mabi.jpg" alt="">
     </div>
-    <div class="work_central_block">
+    <div class="work_central_block1 col-6">
       <a href="<?php echo get_permalink($query->post->ID ); ?>" class="work_capture"><?php echo get_the_title( $query->post->ID ); ?></a>
       <p class="work_description">Тип организации (Ломбард)</p>
-      <p class="work_description">Светлоград, <?php ulica(); ?> <?php adress(); ?></p>
+      <p class="work_description">Светлоград, <?php ulica(); ?> <?php adress(); ?> <?php the_field('adress'); ?></p>
       <?php tel(array('type' => 'category', )); ?>
       <!-- <p class="work_price">30 000 руб.</p> -->
     </div>
-    <div class="work_right_block">
+    <div class="work_right_block1 col-3">
       <div class="work_icons_container">
       <?php rejim_raboti(array('type'=>'category', 'day'=> 'small',)); ?>
     <!--<div class="work_icons crown"></div>
