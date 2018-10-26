@@ -3,9 +3,12 @@ get_header(); // подключаем header.php
 // global $wp_query;
 // print_r($wp_query);
 // include (TEMPLATEPATH . '/moduls/tax/category_organizacii.php');
-$term = get_queried_object(); // данные элемента текущей таксономии
-// var_dump($term);
-//       object(WP_Term)#11714 (10) {
+
+          // $term = get_queried_object(); // данные элемента текущей таксономии
+//           var_dump($term);
+
+          // дамп функции get_queried_object()
+// object(WP_Term)#11759 (10) {
 //   ["term_id"]=>
 //   int(38)
 //   ["name"]=>
@@ -28,22 +31,39 @@ $term = get_queried_object(); // данные элемента текущей т
 //   string(3) "raw"
 // }
 
-          $term = get_queried_object(); // данные элемента текущей таксономии
+
+$term = get_queried_object(); // данные элемента текущей таксономии
+$term_slug = $term->slug;
+$term_taxonomy = $term->taxonomy;
+var_dump($term_slug);
+var_dump($term_taxonomy);
+
 $args = array(
   // 'post_type' => 'post_organizacii',
   // 'category_organizacii'=>$term->slug
-	'taxonomy'=>'ulica',
-	'numberposts' => 3,
+	// 'taxonomy'=>'ulica',
+	// 'numberposts' => 3,
+	'post_type'      => 'post_organizacii',
+  	'posts_per_page' => 10,
+  	'tax_query'      =>
+    array(
+      'taxonomy' => $term_taxonomy,
+      // 'field'    => 'slug',
+      'terms'    => $term_slug,
+    ),
 );
 
-$query = new WP_Query($args);
-var_dump($query);
-while( $query->have_posts() ) {
-  $query->next_post();
 
-// include (TEMPLATEPATH . '/moduls/tax/loop_tax.php');
-the_title();
-}
+
+$query = new WP_Query($args);
+// var_dump($query);
+while( $query->have_posts() ) {
+	$query->the_post();
+echo "<hr>";
+	// include (TEMPLATEPATH . '/moduls/tax/loop_tax.php');
+	the_title();
+};
+
 pagination();
 
 // Восстанавливаем оригинальные данные поста
