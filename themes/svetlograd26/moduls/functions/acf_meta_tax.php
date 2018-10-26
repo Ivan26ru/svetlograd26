@@ -118,8 +118,8 @@ function ulica(){
 
 // вывод адреса без улицы, то есть //дом 5 кв 7
 function adress(){
-$acf_adress=get_field('adress');
-echo $acf_adress;
+	$acf_adress=get_field('adress');
+	echo  $acf_adress;
 };
 
 // миниатюра плашки
