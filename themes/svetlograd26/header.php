@@ -78,4 +78,4 @@
       <?php //include (TEMPLATEPATH . '/moduls/menu/menu-top2.php'); ?>
     </section>
     <!-- /.nav -->
-      <?php include (TEMPLATEPATH . '/moduls/carausel/carausel-top.php'); ?>
+      <?php //include (TEMPLATEPATH . '/moduls/carausel/carausel-top.php'); ?>
