@@ -1,4 +1,4 @@
-/**
+﻿/**
 Theme Name: Городской портал 2018
 Author: Иван Писаренко
 */
@@ -107,11 +107,11 @@ header {
 .social_networks {
     border: 1px solid #a300e5;
     border-radius: 5px;
-/*    display: -webkit-flex;
+    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     justify-content: space-around;
-    align-items: center;*/
+    align-items: center;
     margin-bottom: 20px;
     /*width: 135px;*/
     float: right;
@@ -127,13 +127,13 @@ header {
     color: #a300e5;
     border: 2px solid #a300e5;
     border-radius: 50%;
-    /*display: -webkit-flex;
+    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     -webkit-justify-content: center;
     justify-content: center;
     -webkit-align-items: center;
-    align-items: center;*/
+    align-items: center;
     background: #fff
 }
 
@@ -2348,7 +2348,7 @@ section.vip_ads_flats {
 
 .slick-arrow.slick-prev {
     position: absolute;
-    /*top: 985px;*/
+    top: 107%;
     left: 13%;
     opacity: 0.5;
     border: none;
@@ -2359,13 +2359,13 @@ section.vip_ads_flats {
 }
 
 .slick-arrow.slick-next {
-    /*top: 985px;*/
+    top: 107%;
     right: 13%;
 }
 
 .vip_ads_flats .slick-dots {
     position: absolute;
-    /*top: 985px;*/
+    top: 985px;
     width: 100%;
     height: 18px;
     margin: 0 auto;
