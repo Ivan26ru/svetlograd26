@@ -112,7 +112,8 @@ function tel($attr = []){
 function ulica(){
 	$cur_terms = get_the_terms( $post->ID, 'ulica' );
 	foreach( $cur_terms as $cur_term ){
-	  echo '<a href="'. get_term_link( (int)$cur_term->term_id, $cur_term->taxonomy ) .'">'. $cur_term->name .'</a>,';
+	  // echo '<a href="'. get_term_link( (int)$cur_term->term_id, $cur_term->taxonomy ) .'">'. $cur_term->name .'</a>,';
+	  echo $cur_term->name .', ';
 	}
 };
 
@@ -229,6 +230,6 @@ if ($attr['type']==='category') {
 };// category|post
 
 endif;//Проверка наличия произвольного поля
-};
+};//.rejim_raboti
 
 ?>
