@@ -29,7 +29,7 @@ if( $images ): ?>
 if( $images ): ?>
     <div class="the_flat_slider-nav">
         <?php foreach( $images as $image ): ?>
-                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                     <img src="<?php echo $image['sizes']['plashka_index_210']; ?>" alt="<?php echo $image['alt']; ?>" />
         <?php endforeach; ?>
     </div>
 <?php endif; ?>
