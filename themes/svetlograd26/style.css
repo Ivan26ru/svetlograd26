@@ -3739,7 +3739,7 @@ span.work_by_profession_text {
 }
 
 .work_containers {
-    height: 155px;
+    /*height: 155px;*/
     padding: 5px 5px 15px 0;
     position: relative;
     margin-bottom: 10px;
@@ -3881,7 +3881,9 @@ span.work_by_profession_text {
 }
 
 .date_placement {
-    margin-top: 42px;
+    margin-top: 22px;
+    color: #777;
+    font-style: italic;
 }
 
 nav.pagination_block {
@@ -5326,6 +5328,11 @@ nav.pagination_block {
     justify-content: space-between;
     flex-grow: 1;
     align-items: flex-end;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .features__item+.features__item {
@@ -5336,7 +5343,7 @@ nav.pagination_block {
     position: relative;
     display: flex;
     flex-grow: 1;
-    min-width: 300px;
+    min-width: 150px;
 }
 
 .features__prop::after {
@@ -5372,4 +5379,14 @@ nav.pagination_block {
 .menu_social li{
     list-style:none;
     padding: 0 3px;
+}
+
+.img_all_auto_100 img{
+    width: auto;
+    height: 100%;
+}
+
+
+.img_all_auto_100 a{
+	display: block;
 }
