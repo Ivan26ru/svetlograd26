@@ -5390,3 +5390,7 @@ nav.pagination_block {
 .img_all_auto_100 a{
 	display: block;
 }
+
+.dn{
+    display: none;
+}
