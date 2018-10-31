@@ -7,12 +7,12 @@ include (TEMPLATEPATH . '/moduls/functions/pagination.php');
 //
 // работа с меню сайта
 //
-
-if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page('Настройки сайта');
-	
-}
+if( is_super_admin( $user_id ) ){
+    // ...
+    if( function_exists('acf_add_options_page') ) { 
+        acf_add_options_page('Настройки сайта');
+    };
+};
 
 register_nav_menus(array( // Регистрируем 2 меню
     'top' => 'Верхнее меню', // Верхнее
