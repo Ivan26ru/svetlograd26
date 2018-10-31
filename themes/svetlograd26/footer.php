@@ -1,4 +1,4 @@
-    <footer>
+    <footer class="dn">
       <div class="container">
         <div class="row">
           <div class="col-6 col-md-3">
