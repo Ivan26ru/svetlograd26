@@ -132,6 +132,7 @@ function url_img_plashka($name_tax_cat,$id_tax_cat){
     }
 };
 
+
 // режим работы функция из организаций
 // ['day'] сокращенные названия типа пн, вт, ср (по у молчанию длинные то есть понедельник, вторник)
 function rejim_raboti($attr = []){
@@ -157,6 +158,19 @@ if ($attr['day']==='small') {
 	$arr_1_7[7]= 'Воскресенье';
 };
 
+// функция проверки на разность значений
+// function ifraznost($vol1, $vol2, $text){
+// 	// var $itog='';//итоговое значение
+// 	if ($vol1===$vol2) {
+// 		$itog=$vol1;
+// 	} else {
+// 		$itog= $vol1 . $text . $vol2;
+// 	};
+// 	// return $itog;
+// 	return $vol1 . $text . $vol2;
+// };
+
+
 // Проверяет наличие прозвольного поля
 if( have_rows('rejim') ):
 
@@ -167,16 +181,29 @@ if ($attr['type']==='category') {
 	// перебор данного произвольного поля
 	while( have_rows('rejim') ): the_row();
 			// переменные с поля
+			// день
 			$den_s = get_sub_field('den_s');
 			$den_do = get_sub_field('den_do');
+			if($den_s===$den_do){
+				$den = $arr_1_7[$den_s];
+			}else{
+				$den = $arr_1_7[$den_s] . ' - '	. $arr_1_7[$den_do];
+			};
+			// время работы
 			$work_s = get_sub_field('work_s');
 			$work_do = get_sub_field('work_do');
+			// обед
 			$obed_s = get_sub_field('obed_s');
 			$obed_do = get_sub_field('obed_do');
+			if (strlen($obed_s)>0) {
+				$obed=$obed_s . ' - ' . $obed_do;
+			}else{
+				$obed='без обеда';
+			};
 
 		echo '<li>';
 	if (strlen($work_s)>0) {
-		echo $arr_1_7[$den_s] . ' - ' . $arr_1_7[$den_do] . ': ' . $work_s . ' - ' . $work_do. '</li><li>обед: ' . $obed_s . ' - ' . $obed_do;
+		echo $den . ': ' . $work_s . ' - ' . $work_do. '</li><li>обед: ' . $obed ;
 	}elseif($den_s===$den_do){
 		echo 'выходной: ' . $arr_1_7[$den_s];
 	}else{
@@ -193,28 +220,39 @@ if ($attr['type']==='category') {
 	// перебор данного произвольного поля
 	while( have_rows('rejim') ): the_row();
 			// переменные с поля
+			// день
 			$den_s = get_sub_field('den_s');
 			$den_do = get_sub_field('den_do');
+
+			if($den_s===$den_do){
+				$den = $arr_1_7[$den_s];
+			}else{
+				$den = $arr_1_7[$den_s] . ' - '	. $arr_1_7[$den_do];
+			};
+
+			// время работы
 			$work_s = get_sub_field('work_s');
 			$work_do = get_sub_field('work_do');
+			// обед
 			$obed_s = get_sub_field('obed_s');
 			$obed_do = get_sub_field('obed_do');
+			if (strlen($obed_s)>0) {
+				$obed=$obed_s . ' - ' . $obed_do;
+			}else{
+				$obed='без обеда';
+			};
 
 		echo '<li class="features__item">';
-	if (strlen($work_s)>0) {
+	if (strlen($work_s)>0) {//если заполнено время работы
 		echo '<span class="features__prop">'
-		. $arr_1_7[$den_s]
-		. ' - '
-		. $arr_1_7[$den_do]
+		. $den
 		. '</span><span class="features__value">'
 		. $work_s
 		. ' - '
 		. $work_do
 		. '</span></li>'
 		. '<li class="features__item"><span class="features__prop">обед:</span><span class="features__value">'
-		. $obed_s
-		. ' - '
-		. $obed_do
+		. $obed
 		. '</span>';
 	}elseif($den_s===$den_do){
 		echo '<span class="features__prop">Выходной:</span>'
