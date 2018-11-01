@@ -7,7 +7,7 @@
     <?php if(function_exists('bcn_display'))
     {
         bcn_display();
-    }?>
+    }; ?>
 </div>
             <h3 class="buy_apartments">
               <span><?php the_title(); ?></span>
@@ -46,7 +46,7 @@ if( $images ): ?>
                     <span class="features__prop">Адрес</span>
                     <span class="features__value">Светлоград,<br><?php ulica(); ?><br><?php adress(); ?></span>
                   </li>
-                  <?php tel(array('type' => 'post', )); ?>
+                  <?php tel(array('type' => 'post')); ?>
                 </ul>
               </div>
               <?php rejim_raboti(array('type'=>'post', )); ?>
