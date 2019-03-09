@@ -16,7 +16,7 @@
     <div class="work_central_block1 col-sm-6">
       <a href="<?php echo get_permalink($post_id); ?>" class="work_capture"><?php echo get_the_title( $query->post->ID ); ?></a>
       <!-- <p class="work_description">Тип организации (Ломбард)</p> -->
-      <p class="work_description">Светлоград, <?php ulica(); ?> <?php adress(); ?> <?php the_field('adress'); ?></p>
+      <p class="work_description">Светлоград, <?php ulica(); ?> <?php adress(); ?> <?php //the_field('adress'); ?></p>
       <?php tel(array('type' => 'category', )); ?>
       <!-- <p class="work_price">30 000 руб.</p> -->
     </div>

@@ -3,13 +3,13 @@
   <div class="vip_flats">
     <div class="vip_slide_1">
       <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-      <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
-      <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide3.jpg" alt="">
+      <!-- <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt=""> -->
+      <!-- <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide3.jpg" alt=""> -->
     </div>
     <div class="vip_slide_2">
       <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide3.jpg" alt="">
-      <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt="">
-      <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt="">
+      <!-- <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide1.jpg" alt=""> -->
+      <!-- <img src="<?php echo get_template_directory_uri();  ?>/images/flats_slide2.jpg" alt=""> -->
     </div>
   </div>
   <!-- слайдер для адаптива -->

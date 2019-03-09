@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Oswald:400,500|Stalinist+One" rel="stylesheet">
-
-  	<?php wp_head(); ?>
+<title><?php wp_title(); ?></title>
+    <?php wp_head(); ?>
     <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->

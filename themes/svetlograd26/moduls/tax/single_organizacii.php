@@ -19,7 +19,7 @@ $images = get_field('foto_all');
 if( $images ): ?>
     <div class="the_flat_slider-for">
         <?php foreach( $images as $image ): ?>
-                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                     <img src="<?php echo $image['sizes']['slider_post_big']; ?>" alt="<?php echo $image['alt']; ?>" />
         <?php endforeach; ?>
     </div>
 <?php endif; ?>
@@ -29,7 +29,7 @@ if( $images ): ?>
 if( $images ): ?>
     <div class="the_flat_slider-nav">
         <?php foreach( $images as $image ): ?>
-                     <img src="<?php echo $image['sizes']['plashka_index_210']; ?>" alt="<?php echo $image['alt']; ?>" />
+                     <img src="<?php echo $image['sizes']['slider_post_small']; ?>" alt="<?php echo $image['alt']; ?>" />
         <?php endforeach; ?>
     </div>
 <?php endif; ?>

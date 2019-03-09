@@ -9,7 +9,7 @@ include (TEMPLATEPATH . '/moduls/functions/pagination.php');
 //
 if( is_super_admin( $user_id ) ){
     // ...
-    if( function_exists('acf_add_options_page') ) { 
+    if( function_exists('acf_add_options_page') ) {
         acf_add_options_page('Настройки сайта');
     };
 };
@@ -22,6 +22,7 @@ register_nav_menus(array( // Регистрируем 2 меню
     'footer-3' => 'подвал 3',
     'footer-4' => 'подвал 4'
 ));
+
 
 // add_filter( 'nav_menu_css_class', 'nav_css_filter' );
 // function nav_css_filter( $classes ){
@@ -224,7 +225,7 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
     function add_styles() { // добавление стилей
         if(is_admin()) return false; // если мы в админке - ничего не делаем
         wp_enqueue_style( 'bootstrap-4', get_template_directory_uri() . '/libs/bootstrap-4.0.0-dist/css/bootstrap.min.css' ); // бутстрап
-        wp_enqueue_style( 'main', get_template_directory_uri().'/style.css?' . date("U") ); // основные стили шаблона
+        wp_enqueue_style( 'main', get_template_directory_uri().'/style.css?' . date('U') ); // основные стили шаблона
         wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/libs/font-awesome-4.7.0/css/font-awesome.min.css' ); // иконки
         wp_enqueue_style( 'slick', get_template_directory_uri() . '/libs/slick/slick.css' ); // библиотека слайдера
         // wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css?' . date("U") ); // основные стили шаблона
@@ -234,6 +235,8 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
 
 // новые размеры миниатюр
 add_image_size('plashka_index_210', '210','210',false);
+add_image_size('slider_post_big', '600','450',true);
+add_image_size('slider_post_small', '136','100',true);
 
 // Включил поддержку миниатюр в постах
 add_theme_support( 'post-thumbnails' );

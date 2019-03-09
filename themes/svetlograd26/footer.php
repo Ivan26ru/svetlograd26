@@ -1,4 +1,4 @@
-    <footer class="dn">
+    <footer>
       <div class="container">
         <div class="row">
           <div class="col-6 col-md-3">
@@ -58,7 +58,7 @@
         <!-- /.row -->
       </div>
       <!-- /.container -->
-      <div class="making">Сайт изготовлен студией <a href="#" target="_blank">8bit-studio</a></div>
+      <div class="making">Сайт изготовлен студией <a href="https://8bit-studio.ru/" target="_blank">8bit-studio</a></div>
     </footer>
     </div>
     <!-- .wrapper -->

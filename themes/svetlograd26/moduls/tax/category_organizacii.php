@@ -1,5 +1,5 @@
     <section class="sections">
-      <h2 class="caption"><?php single_term_title(); ?></h2>
+      <h1 class="caption"><?php single_term_title(); ?></h1>
       <div class="container">
         <?php
           $term = get_queried_object(); // данные элемента текущей таксономии
